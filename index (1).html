@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Yash Katkhade ~ Portfolio</title>
+<!--ADD PIC LINK IN HREF BELOW FOR DISPLAYING LOGO WITH TITLE -->
+<link rel="shortcut icon" href="logo.png">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<!--bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<!--js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<!--google icon link-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--font awesomes icons link-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  
+$(document).ready(function(){
+
+//!--SKILL BAR ANIMATION
+
+  var offsetTop = $('#skills').offset().top;
+  $(window).scroll(function() {
+var height = $(window).height();
+if($(window).scrollTop()+height > offsetTop) {
+  jQuery('.skillbar').each(function(){
+    jQuery(this).find('.skillbar-bar').animate({
+      width:jQuery(this).attr('data-percent')
+    },2000);
+  });
+}
+});
+
+//FOR SCROLLING PAGE SMOOTHLY
+
+$('[data-toggle="tooltip"]').tooltip(); 
+
+// Add smooth scrolling to all links in navbar + fixed link
+$("a").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+ 
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
+});
+})
+
+</script>
+</head>
+ 
+<!---Nav Bar-->
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="150">
+<nav  class="navbar main-nav  navbar-default navbar-fixed-top">
+  
+  <div class="navbar-header" >
+    <!--Creating toggle bar-->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"  style="background-color:rgb(255, 255, 255);">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+    </button>
+    <span> 
+      <a class="navbar-brand" href="index.html" >Yash</a> 
+    </span>
+  </div>
+  <div class="collapse navbar-collapse" id="myNavbar" >
+    <ul class="nav navbar-nav navbar-right ">
+     
+      <li><a href="#about"> ABOUT </a></li>
+	  <li><a href="#about"> Activities </a></li>
+      <li><a href="#contact"> CONTACT </a></li>
+      
+    </ul>
+  </div>
+
+
+</nav>
+
+
+<div id="section2"   class="container-fluid jumbotron text-center lobsterfont" style="margin-top:100px;background-color: white;">
+  <h1>Hey there!</h1>
+  <h1 style="display: inline;">I am</h1>
+  <h1 style="color: #7372dd;display: inline;"> Yash Katkhade</h1>
+  <p style="font-family: 'sans-serif';" >First Year Student</p>
+   <!---ADD RESUME DOC IN THE PUBLIC FOLDER WITH OTHER FILES AND ADD ITS NAME BELOW IN HREF AND NAME OF FILE THAT SHOULD APPEAR AFTER DOWNLOAD IN 'DOWNLOAD'-->
+ <!--- EXAMPLE: <a href="Resume.pdf" download="Myresume" class="btn">Download My Resume</a>-->
+ <a href=" https://drive.google.com/file/d/1kwvgnHJhyLAK2tYAFx5yOXe3SPiWRH5x/view?usp=drivesdk" class="btn btncolor">Download My Resume</a>
+
+</div>  
+
+ <!---ABOUT SECTION -->
+
+<div  id="about" class="container-fluid text-center" style="background-color: #f5f5f5;">
+  <h1 class="heading">ABOUT</h1>
+  <hr class="solid">
+  
+
+  <div class="row">
+     <div class="col-sm-12 col-md-4 col-lg 4 thumb">
+
+<!---PIC AND INTRO-->
+
+        <img onContextMenu="return false;"  src="pic.png" class="zoom img-fluid "  alt="mypic">
+         
+        <h3 align=left style="color: #67676e;">Who am I?</h3>
+       <p align=justify>I am FY student, who strives to learn and explore more and more with love for challenges.</p> 
+
+     </div>    
+
+<!---SKILLS --> 
+
+    <div class="col-sm-12 col-md-8 col-lg ">
+
+        <h3 align=left style="margin-left:2% ;" class="heading"> SKILLS</h3>
+        <div id="skills">
+            <div class="col-lg-8">
+           <div class="skillbar clearfix " data-percent="90%">
+               <div class="skillbar-title" style="background: #7372dd"><span>Management skills</span></div>
+               <div class="skillbar-bar" style="background: #7372dd"></div>
+               <div class="skill-bar-percent">90%</div>
+           </div> <!-- End Skill Bar -->
+           
+           <div class="skillbar clearfix " data-percent="70%">
+               <div class="skillbar-title" style="background: #b7b6fd"><span>Basic Python</span></div>
+               <div class="skillbar-bar" style="background: #b7b6fd;"></div>
+               <div class="skill-bar-percent">70%</div>
+           </div> <!-- End Skill Bar -->
+           
+           <div class="skillbar clearfix " data-percent="50%">
+               <div class="skillbar-title" style="background: #7372dd"><span> Communication </span></div>
+               <div class="skillbar-bar" style="background: #7372dd"></div>
+               <div class="skill-bar-percent">75%</div>
+           </div> <!-- End Skill Bar -->
+           
+           <div class="skillbar clearfix " data-percent="80%">
+               <div class="skillbar-title" style="background: #b7b6fd"><span>Presentation Skill</span></div>
+               <div class="skillbar-bar" style="background: #b7b6fd"></div>
+               <div class="skill-bar-percent">80%</div>
+           </div> <!-- End Skill Bar -->
+             </div> <!-- end of column 1 -->
+             
+            <div class="col-lg-6">
+           <div class="skillbar clearfix " data-percent="60%">
+               <div class="skillbar-title" style="background: #7372dd"><span>Athletics</span></div>
+               <div class="skillbar-bar" style="background: #7372dd;"></div>
+               <div class="skill-bar-percent">75%</div>
+           </div> <!-- End Skill Bar -->
+           
+           <div class="skillbar clearfix " data-percent="75%">
+               <div class="skillbar-title" style="background: #b7b6fd"><span>C Programming</span></div>
+               <div class="skillbar-bar" style="background: #b7b6fd"></div>
+               <div class="skill-bar-percent">70%</div>
+			   
+           </div> <!-- End Skill Bar -->
+			<hr style="width:10%; color:#000;margin-bottom: 75%;" class="solid">
+           
+
+    </div>  
+  </div>
+
+ 
+</div>
+<div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+      <h1 style="color: #67676e;">FIRODIA</h1>
+        <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+        <p style="font-family: 'sans-serif';" >The spirited members of the Mac Club are fervently striving and showcasing their utmost dedication in the pursuit of triumph in the
+          renowned Firodia Karandak Drama Competition</p>
+          <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+              <img src="clubmela.png" style="width:98.5%">
+            
+           </div>
+  
+
+           <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+            <img src="firodia.png" style="width:98.5%">
+            <img src="practice firodia.jpg" style="width:98.5%">
+           </div>
+          
+
+           <div class="col-sm-12  col-md-4 col-lg-4 colmargin">
+            <img src="firodia stage.jpg" style="width:101.5%">
+            </div>
+      
+</div>
+<div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+  <h1 style="color: #67676e;">NAKSHATRA</h1>
+    <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+    <p style="font-family: 'sans-serif';" >Both dramas were a testament to the MAC Club's extraordinary talent, unwavering dedication, and ability to transport viewers into
+      different realms of human experience.</p>
+      <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+          <img src="sambhaji maharaj.jpg" style="width:98.5%">
+        
+       </div>
+
+
+       <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+        <img src="dance .jpg" style="width:210%">
+       </div>
+  
+</div>
+
+
+<div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+  <h1 style="color: #67676e;">TREASURE HUNT + PATHNATYA</h1>
+    <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+    <p style="font-family: 'sans-serif';" >The treasure hunt had transformed into an unforgettable experience, leaving us with a sense of accomplishment, strengthened
+      friendships, and an enduring reminder of the power of teamwork and perseverance and in PATHNATYA The short conclusion of the play left a lasting impression, serving as a catalyst for introspection and inspiring individuals to take action
+      towards creating a more inclusive and harmonious society
+      </p>
+      <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+          <img src="TREASURE HUNT 2.jpg" style="width:68.5%">
+        
+       </div>
+
+
+       <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+        <img src="PATHNATYA .jpg" style="width:200%">
+       </div>
+  
+</div>
+
+<div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+  <h1 style="color: #67676e;">FESTIVAL OF THOUGHTS</h1>
+    <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+    <p style="font-family: 'sans-serif';" >PHULE JAYANTI In essence, the short conclusion of the Mahatma Phule Jayanti celebration during the Fest of Thoughts in our college left
+      an indelible mark on the hearts and minds of all participants, reminding them of the enduring relevance of Phule's teachings and their
+      responsibility to carry forward his legacy of social reform DR.AMBEDKAR JAYANTI Dr. Babasaheb Ambedkar Jayanti, celebrated under the
+      Fest of Thoughts in our college, concluded with a resounding tribute to the visionary leader and architect of the Indian Constitution. The
+      event encapsulated Dr. Ambedkar's invaluable contributions to social justice, equality, and empowerment.It stands as a testament to the
+      enduring impact of Dr. Ambedkar's teachings and his unwavering dedication to social transformation.</p>
+      <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+          <img src="NIGHT .jpg" style="width:98.5%">
+        
+       </div>
+
+
+       <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+        <img src="FESTIVAL OF THOUGHTS 1.jpg" style="width:98.5%">
+      
+       </div>
+      
+
+       <div class="col-sm-12  col-md-4 col-lg-4 colmargin">
+        <img src="FESTIVAL OF THOUGHTS 2.jpg" style="width:101.5%">
+        </div>
+    
+   <div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+          <h1 style="color: #67676e;">FAIRWELL</h1>
+            <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+            <p style="font-family: 'sans-serif';" >we extend our heartfelt gratitude to the seniors who played an invaluable role in our engineering journey. Their guidance, support, and
+              mentorship have been instrumental in shaping our academic and personal growth. They have selflessly shared their knowledge,
+              experiences, and wisdom, treating us as brothers and empowering us to overcome challenges. Their presence and encouragement have
+              made our engineering year memorable and meaningful. As we move forward, we will cherish the bonds formed and strive to pay it forward
+              by assisting and guiding future generations of students.</p>
+              <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+                  <img src="FAIRWELL1.jpg" style="width:98.5%">
+                
+               </div>
+      
+    
+               <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+                <img src="FAIRWELL 2.jpg" style="width:98.5%">
+               </div>
+              
+    
+               <div class="col-sm-12  col-md-4 col-lg-4 colmargin">
+                <img src="FAIRWELL 3.jpg" style="width:60.5%">
+                </div>
+          
+    </div>    
+   
+    <div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+      <h1 style="color: #67676e;">TRIVELING</h1>
+        <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+
+          <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+              <img src="TRIVELING 2.jpg" style="width:68.5%">
+           </div>
+    
+    
+           <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+            <img src="TRIVELING 3.jpg" style="width:100%">
+           </div>
+      
+           <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+            <img src="TRIVELING 4.jpg" style="width:100%">
+           </div>
+    </div>  
+    <div id="work" class="container-fluid  text-center " style="background-color: white;padding-bottom: 5%;">
+      <h1 style="color: #67676e;">PROJECT</h1>
+        <hr style="width:10%; color:#000;margin-bottom: 5%;" class="solid">
+
+          <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+              <img src="PROJECT 1.jpg" style="width:70.5%">
+           </div>
+    
+    
+           <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+            <img src="PROJECT 2.jpg" style="width:100%">
+           </div>
+      
+           <div class="col-sm-12 col-md-4 col-lg-4 colmargin">
+            <img src="PROJECT 3.jpg" style="width:100%">
+           </div>
+    </div>   
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        #timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #ffffff;
+        }
+
+        #timetable th {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #timetable td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #timetable td.time {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        #timetable td.event {
+            background-color: #e74c3c;
+            color: #ffffff;
+        }
+
+        #timetable td.break {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        #timetable td.empty {
+            background-color: #dddddd;
+        }
+    </style>
+
+    <table id="timetable">
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td class="time">09:00 - 10:00</td>
+            <td class="event">SIC</td>
+            <td class="empty"></td>
+            <td class="event">SON</td>
+            <td class="event">DT</td>
+            <td class="event">EDS</td>
+        </tr>
+        <tr>
+            <td class="time">10:00 - 11:00</td>
+            <td class="event">FE</td>
+            <td class="event">AM</td>
+            <td class="event">SIC</td>
+            <td class="empty"></td>
+            <td class="event">GUEST LECTURE</td>
+        </tr>
+        <tr>
+            <td class="time">11:00 - 12:00</td>
+            <td class="break" colspan="5">Lunch Break</td>
+        </tr>
+        <tr>
+            <td class="time">12:00 - 13:00</td>
+            <td class="empty"></td>
+            <td class="event">EDS LAB</td>
+            <td class="event">SON</td>
+            <td class="event">SIC</td>
+            <td class="event">AM</td>
+        </tr>
+        <tr>
+            <td class="time">13:00 - 14:00</td>
+            <td class="event">AM LAB</td>
+            <td class="event">MT</td>
+            <td class="event">SON LAB</td>
+            <td class="empty"></td>
+            <td class="event">SPORTS</td>
+        </tr>
+        <tr>
+            <td class="time">14:00 - 15:00</td>
+            <td class="event">SIC</td>
+            <td class="event">EDS</td>
+            <td class="empty"></td>
+            <td class="event">AM</td>
+            <td class="event">SIC</td>
+        </tr>
+    </table>
+
+       
+
+
+       
+</div>
+ <!---CONTACT SECTION -->
+
+ <!-- Contact Section -->
+ <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <h2 class="w3-text-light-grey">Contact Me</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+  <div class="w3-section">
+    <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> ALANDI,Pune</p>
+    <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: 9324608201</p>
+    <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email:yash.katkhade@mitaoe.ac.in</p>
+  </div><br>
+  <p style="font-size: 20px; font-weight: bold; text-align: center; color: rgb(138, 9, 170);    ">Let's get in touch. Send me a message:</p>
+
+  <form action="/action_page.php" target="_blank">
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+    <p>
+      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </p>
+  </form>
+<!-- End Contact Section -->
+
+  <!---FOOTER -->
+<div class="container-fluid  text-center footer" >
+   <a  <p>Designed by YK </p></a>
+</div>
+
+</body>
+</html>
